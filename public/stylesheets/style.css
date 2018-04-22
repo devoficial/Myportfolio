@@ -1,7 +1,10 @@
 body{
   font-family:  'Gugi', cursive;
 }
-
+.wrapper{
+  margin: 0;
+  padding: 0;
+}
 .header{
   font-family:  'Gugi', cursive;
   font-size: 50px;
@@ -75,5 +78,5 @@ i{
   height: 80%;
 }
 .project-section1{
-  width: 18rem;
+  width: 14rem;
 }

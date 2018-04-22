@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  .container-fluid 
+ .wrapper
+    .container-fluid 
       .row.justify-content-center
         .col-md-12.text-center#head
             h1.header Hi, I'm Debasis I design and Build 
@@ -10,7 +11,7 @@ block content
              button.btn.btn-warning.mt-5.main Yes, I'm available for hire 
             h6 learn more about what i do
             a(href="#myskill") #[i.fas.fa-angle-down]
-  .container
+    .container
       .row.justify-content-center.pb-5.mb-5.scroll-animations
         .container.text-center.pt-5.mt-5.pb-5
             h1#myskill MyExperties
@@ -41,9 +42,9 @@ block content
                  |I build the backend with Node, Express , MongoDB
                  |I love coding things from scratch,
                  |but I can work with front-end frameworks like Bootstrap and sematic ui too.
-   .container-fluid.section
-        .row.justify-content-around.text-center.pb-5.scroll-animations2
-          .container.pt-5
+    .container-fluid.section
+        .row.justify-content-around.pt-5.pb-5.scroll-animations2
+          .container.text-center
             h1 MyWork
             p Want to see more examples? 
               a(href="mailto:debasisnath84@gmail.com") Email me.
@@ -62,55 +63,55 @@ block content
                  img.card-img-top(src="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&cs=tinysrgb&h=350" alt="select restaurant")
                  div.card-body
                     p.card-text.text-primary SelectRestaurant
-   .container-fluid
-        .row.justify-content-around.text-center.pt-5.pb-5.scroll-animations3
-          .container.pt-5.pb-5
+    .container-fluid
+        .container.text-center.pt-5.pb-5
             h1 Personal Projects
-            p Currently Im building things of my own. 
-          div.col-md-3.column.animated
-             .card.project-section1
-                 a(href="https://github.com/devoficial/calcandtodo")
-                  img.card-img-top.project-section(src="https://images.pexels.com/photos/433636/pexels-photo-433636.jpeg?auto=compress&cs=tinysrgb&h=350" alt="calcandtodo")
-                 div.card-body
-                    h5.card-title Calculator and Todo
-                    p.card-text
-                     | HTML5 Css3 and JQuery.
-          div.col-md-3.column.animated
-             .card.project-section1
-                 a(href="https://github.com/devoficial/whazapp")
-                  img.card-img-top.project-section(src="https://images.pexels.com/photos/433617/pexels-photo-433617.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Whazapp")
-                 div.card-body
-                    h5.card-title Whazapp
-                    p.card-text
-                     | A chat app made with flask.
-          div.col-md-3.column.animated
-             .card.project-section1
-                 a(href="https://github.com/devoficial/BlogTheCode")
-                  img.card-img-top.project-section(src="https://images.pexels.com/photos/459688/pexels-photo-459688.jpeg?auto=compress&cs=tinysrgb&h=350" alt="BlogTheCode")
-                 div.card-body
-                    h5.card-title BlogApp
-                    p.card-text
-                    | Made with Node.js and Express.
-          div.col-md-3.column.animated
-             .card.project-section1
-                 a(href="https://github.com/devoficial/protfoliostarterfiles")
-                  img.card-img-top.project-section(src="https://images.pexels.com/photos/955448/pexels-photo-955448.jpeg?auto=compress&cs=tinysrgb&h=350" alt="portfolio")
-                 div.card-body
-                    h5.card-title portfolio
-                    p.card-text
-                    | HTML5 Css3 and jQuery.
-   .container-fluid#last1
-        .row.justify-content-around.text-center.pb-5.scroll-animations2
-          .container#last.p-5
+            p Currently Im building things of my own.
+            .row.justify-content-around.pt-5.pb-5
+                .col-md-3.column.project-section1.animated
+                     .card
+                        a(href="https://github.com/devoficial/calcandtodo")
+                        img.card-img-top.project-section(src="https://images.pexels.com/photos/433636/pexels-photo-433636.jpeg?auto=compress&cs=tinysrgb&h=350" alt="calcandtodo")
+                        div.card-body
+                            h5.card-title Calculator and Todo
+                            p.card-text
+                            | HTML5 Css3 and JQuery.
+                .col-md-3.column.project-section1.animated
+                      .card
+                        a(href="https://github.com/devoficial/whazapp")
+                        img.card-img-top.project-section(src="https://images.pexels.com/photos/433617/pexels-photo-433617.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Whazapp")
+                        div.card-body
+                            h5.card-title Whazapp
+                            p.card-text
+                            | A chat app made with flask.
+                .col-md-3.column.project-section1.animated
+                      .card
+                        a(href="https://github.com/devoficial/BlogTheCode")
+                        img.card-img-top.project-section(src="https://images.pexels.com/photos/459688/pexels-photo-459688.jpeg?auto=compress&cs=tinysrgb&h=350" alt="BlogTheCode")
+                        div.card-body
+                            h5.card-title BlogApp
+                            p.card-text
+                            | Made with Node.js and Express.
+                .col-md-3.column.project-section1.animated
+                      .card
+                        a(href="https://github.com/devoficial/protfoliostarterfiles")
+                        img.card-img-top.project-section(src="https://images.pexels.com/photos/955448/pexels-photo-955448.jpeg?auto=compress&cs=tinysrgb&h=350" alt="portfolio")
+                        div.card-body
+                            h5.card-title portfolio
+                            p.card-text
+                            | HTML5 Css3 and jQuery.
+    .container-fluid#last1
+        .row.justify-content-around.text-center.pb-5
+          .container#last.pt-5
             h1 Want to Work Together ?
             h5 
              | I'm currently accepting new projects and looking for a job
              | I would love to hear about your project.
              | Please contact me here.
             a.btn.btn-outline-secondary(href="#normalModal" data-toggle="modal") Contact me
-   .container-fluid#last2
-        .row.justify-content-around.text-center.pb-5.scroll-animations2
-          .container#last.p-5
+    .container-fluid#last2
+        .row.justify-content-around.text-center.pb-5
+          .container#last.pt-5
             h5 Debasis Nath || full-stack Node.js Developer
             p Designed and coded by me &copy; 2018
             a(href="https://github.com/devoficial")
