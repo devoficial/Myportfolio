@@ -108,7 +108,7 @@ block content
              | I'm currently accepting new projects and looking for a job
              | I would love to hear about your project.
              | Please contact me here.
-            a.btn.btn-outline-secondary(href="#normalModal" data-toggle="modal") Contact me
+            a.btn.btn-outline-secondary.target(href="#" data-toggle="modal" data-target="#basicModal") Contact me
     .container-fluid#last2
         .row.justify-content-around.text-center.pb-5
           .container#last.pt-5
@@ -130,3 +130,37 @@ block content
                 span &nbsp;&nbsp;&nbsp;
                 |    
                 i.fab.fa-facebook-f
+    div.modal.animated.rotateInDownRight(id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true")
+        div.container-fluid.main-modal
+            div.modal-content
+                div.modal-header
+                    h3.modal-title(id="myModalLabel") Ok, Describe your project and send it to me
+                        | I'll get back to you shortly.
+                    button.close(data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+                div.modal-body
+                    form(action="/contact" method="POST")
+                        div.form-group
+                            label(for="name") Name
+                            input(type="text",
+                            id="name",
+                            name="name",
+                            placeholder="Your name",
+                            class="form-control"
+                            required="required"
+                            )
+                        div.form-group
+                            label(for="email") Email
+                            input(type="email",
+                            id="email",
+                            name="email",
+                            placeholder="someone@example.com",
+                            class="form-control"
+                            required="required"
+                            )
+                        div.form-group
+                          textarea.form-control#description(name="message" rows="8" required="required" data-error="Please, leave me a message." placeholder="Describe your project")
+                        div.form-group
+                            div.g-recaptcha(data-sitekey="6LdPllMUAAAAAJ8Kcaae3LFYbaHY08gdsXRHE_rk")
+                            button.btn.btn-info.btn-block#submit(type="submit") Submit
+  

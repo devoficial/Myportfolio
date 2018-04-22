@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require("body-parser");
 var indexRouter = require('./routes/index');
-
+var sanitizer = require("express-sanitizer");
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(sanitizer());
 app.use('/', indexRouter);
 
 app.listen(process.env.PORT, process.env.IP, function(){

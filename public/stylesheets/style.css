@@ -80,3 +80,15 @@ i{
 .project-section1{
   width: 14rem;
 }
+
+/* styling the modal*/
+
+div .modal-content{
+  padding: 8rem;
+  background-color: #000;
+  color: #fff;
+}
+div .modal-body{
+  width:50%;
+  margin: 0 auto;
+}
